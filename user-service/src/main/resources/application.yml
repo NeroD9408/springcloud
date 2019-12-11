@@ -1,0 +1,17 @@
+server:
+  port: ${port:9091}
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///springcloud_test
+    username: root
+    password: root
+  application:
+    name: user-service
+  # 应用名
+mybatis:
+  type-aliases-package: com.neroxy.user.pojo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
